@@ -11,7 +11,14 @@ export function usePostsLoading() {
 }
 
 export function usePostsListManagement() {
-  const { removePost, posts } = usePostContext()
+  const { removePost, posts, fetchPosts } = usePostContext()
+
+  const loadPosts = () => {
+    useEffect(() => {
+      fetchPosts()
+    }, [fetchPosts])
+  }
+
   const handlePostRemove = useCallback(
     (postId: number) => () => {
       removePost(postId)
@@ -21,6 +28,7 @@ export function usePostsListManagement() {
 
   return {
     handlePostRemove,
-    posts
+    posts,
+    loadPosts
   }
 }

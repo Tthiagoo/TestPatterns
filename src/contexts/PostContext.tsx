@@ -7,7 +7,7 @@ import {
   useCallback
 } from 'react'
 
-interface Post {
+export interface Post {
   id: number
   title: string
   body: string

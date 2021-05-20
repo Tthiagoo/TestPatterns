@@ -4,7 +4,6 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-
   padding: 30px;
 `
 export const GridPost = styled.div`
@@ -19,9 +18,11 @@ export const GridPost = styled.div`
   border-radius: 2%;
   overflow-y: scroll;
 `
-export const PostItem = styled.div`
+export const PostContainer = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
   border: 1px solid red;
+  align-items: center;
+  justify-content: center;
 `

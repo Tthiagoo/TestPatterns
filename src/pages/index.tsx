@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import { Container } from '../styles/pages/Home'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../contexts/AuthContext'
 
 const Home: React.FC = () => {
   const { user, login, logout } = useAuth()

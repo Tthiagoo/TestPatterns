@@ -4,14 +4,17 @@ import { ThemeProvider } from 'styled-components'
 
 import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
-import { AuthProvider } from '../context/AuthContext'
+import { AuthProvider } from '../contexts/AuthContext'
+import { PostProvider } from '../contexts/PostContext'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
       <AuthProvider>
-        <Component {...pageProps} />
-        <GlobalStyle />
+        <PostProvider>
+          <Component {...pageProps} />
+          <GlobalStyle />
+        </PostProvider>
       </AuthProvider>
     </ThemeProvider>
   )

@@ -25,7 +25,7 @@ export interface PostsContextData {
 
 export const PostsContext = createContext({} as PostsContextData)
 
-export function usePost(): PostsContextData {
+export function usePostContext(): PostsContextData {
   return useContext(PostsContext)
 }
 

@@ -12,7 +12,7 @@ export const GridPost = styled.div`
   display: grid;
   height: 100%;
   grid-auto-flow: row;
-  grid-auto-rows: 25%;
+  grid-auto-rows: 35%;
   grid-gap: 15px;
   padding: 6%;
   border-radius: 2%;
@@ -22,7 +22,19 @@ export const PostContainer = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  border: 1px solid red;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  background: ${setLightness(0.2, '#121214')};
+
+  h1 {
+    align-self: flex-start;
+    margin-bottom: 5px;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+  p {
+  }
 `

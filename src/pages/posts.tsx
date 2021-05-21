@@ -4,7 +4,7 @@ import { PostComponent } from '../components/Posts/PostComponent'
 
 /* eslint-disable react/react-in-jsx-scope */
 export default function MainPosts(): JSX.Element {
-  const { posts, handlePostRemove, loadPosts } = usePostsListManagement()
+  const { posts, loadPosts } = usePostsListManagement()
   loadPosts()
   return (
     <Container>

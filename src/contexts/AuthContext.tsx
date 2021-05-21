@@ -13,12 +13,8 @@ type authContextType = {
   login: () => void
   logout: () => void
 }
-const authContextDefaultValues: authContextType = {
-  user: null,
-  login: () => {},
-  logout: () => {}
-}
-const AuthContext = createContext<authContextType>(authContextDefaultValues)
+
+const AuthContext = createContext({} as authContextType)
 
 export function useAuth() {
   return useContext(AuthContext)

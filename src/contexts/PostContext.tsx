@@ -6,31 +6,20 @@ import {
   useState,
   useCallback
 } from 'react'
+import { IPostsContextData, IPost } from '../DTOs/PostDto'
 
-export interface Post {
-  id: number
-  title: string
-  body: string
-}
 type Props = {
   children: ReactNode
 }
 
-export interface PostsContextData {
-  posts: Post[]
-  isLoading: boolean
-  fetchPosts: () => void
-  removePost: (postId: number) => void
-}
+export const PostsContext = createContext({} as IPostsContextData)
 
-export const PostsContext = createContext({} as PostsContextData)
-
-export function usePostContext(): PostsContextData {
+export function usePostContext(): IPostsContextData {
   return useContext(PostsContext)
 }
 
 export function PostProvider({ children }: Props): JSX.Element {
-  const [posts, setPosts] = useState<Post[]>([])
+  const [posts, setPosts] = useState<IPost[]>([])
   const [isLoading, setIsLoading] = useState(false)
 
   const fetchPosts = useCallback(() => {

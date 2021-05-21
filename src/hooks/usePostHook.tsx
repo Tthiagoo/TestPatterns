@@ -2,14 +2,6 @@
 import { useCallback, useEffect } from 'react'
 import { usePostContext } from '../contexts/PostContext'
 
-export function usePostsLoading() {
-  const { fetchPosts } = usePostContext()
-
-  useEffect(() => {
-    fetchPosts()
-  }, [fetchPosts])
-}
-
 export function usePostsListManagement() {
   const { removePost, posts, fetchPosts } = usePostContext()
 

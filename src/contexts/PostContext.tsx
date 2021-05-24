@@ -6,6 +6,7 @@ import {
   useState,
   useCallback
 } from 'react'
+
 import { IPostsContextData, IPost } from '../DTOs/PostDto'
 
 type Props = {

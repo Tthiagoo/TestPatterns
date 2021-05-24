@@ -6,10 +6,10 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-
   body {
     background: ${props => props.theme.colors.background};
+    font-size: 14px;
     color: ${props => props.theme.colors.text};
-    font: 400 16px Roboto, sans-serif;
+    font-family: sans-serif;
   }
 `

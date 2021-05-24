@@ -17,6 +17,7 @@ const Home: React.FC = () => {
       <div>
         <button onClick={login}>Login</button>
         <button onClick={logout}>Logout</button>
+        <button>Change Theme</button>
       </div>
     </Container>
   )

@@ -17,7 +17,7 @@ export const Firsttheme = {
 }
 
 export const CustomFirstTheme = {
-  name: 'first',
+  title: 'first',
   colors: {
     primary: '#16a085',
     black: '#ecf0f1',
@@ -27,7 +27,7 @@ export const CustomFirstTheme = {
 }
 
 export const secondTheme = {
-  name: 'second',
+  title: 'second',
   colors: {
     primary: '#8e44ad',
     black: '#34495e',

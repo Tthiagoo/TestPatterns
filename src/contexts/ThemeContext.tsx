@@ -28,9 +28,9 @@ export const CustomThemeProvider: React.FC = ({
   const [theme, setTheme] = useState<ITheme>(CustomFirstTheme)
 
   const toggleTheme = useCallback(() => {
-    if (theme.name === 'first') {
+    if (theme.title === 'first') {
       setTheme(secondTheme)
-    } else if (theme.name === 'second') {
+    } else if (theme.title === 'second') {
       setTheme(CustomFirstTheme)
     }
   }, [theme])

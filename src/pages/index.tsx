@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import { Container } from '../styles/pages/Home'
 import { useAuth } from '../contexts/AuthContext'
+import { SwitchTheme } from '../components/SwitchTheme'
 
 const Home: React.FC = () => {
   const { user, login, logout } = useAuth()
@@ -17,7 +18,7 @@ const Home: React.FC = () => {
       <div>
         <button onClick={login}>Login</button>
         <button onClick={logout}>Logout</button>
-        <button>Change Theme</button>
+        <SwitchTheme />
       </div>
     </Container>
   )

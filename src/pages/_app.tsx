@@ -1,22 +1,20 @@
 import React from 'react'
 import { AppProps } from 'next/app'
-import { ThemeProvider } from 'styled-components'
-
 import GlobalStyle from '../styles/global'
-import { Firsttheme } from '../styles/theme'
 import { AuthProvider } from '../contexts/AuthContext'
 import { PostProvider } from '../contexts/PostContext'
+import { CustomThemeProvider } from '../contexts/ThemeContext'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={Firsttheme}>
+    <CustomThemeProvider>
       <AuthProvider>
         <PostProvider>
           <Component {...pageProps} />
           <GlobalStyle />
         </PostProvider>
       </AuthProvider>
-    </ThemeProvider>
+    </CustomThemeProvider>
   )
 }
 

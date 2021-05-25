@@ -4,7 +4,7 @@ export interface IThemeContextData {
 }
 
 export interface ITheme {
-  name: string
+  title: string
   colors: {
     primary: string
     black: string
